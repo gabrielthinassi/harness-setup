@@ -9,6 +9,31 @@
 
 Para entregar uma feature: no Chat do VS Code, selecione o agente **Orquestrador** e informe o ID da US (ex.: `US-123`).
 
+> [!IMPORTANT]
+> ## 🚀 Início rápido: setup inicial do harness
+> O Orquestrador só funciona com o harness adaptado à aplicação (`.github/harness-setup.md` com `status: CONCLUIDO`).
+> Descubra qual é o seu caso:
+>
+> ### A) Este repositório (Sistema de Chamados) — setup já feito
+> 1. Abra a pasta na raiz do repositório no VS Code (o `.vscode/settings.json` já habilita os agentes).
+> 2. Crie a US em `docs/user-stories/US-<id>.md`, usando `US-000-exemplo.md` como modelo.
+> 3. No Chat, selecione o agente **Orquestrador** e informe o ID da US (ex.: `US-001`).
+> 4. O **BA** avalia se a US está pronta e pergunta o que faltar. Responda tudo: o Dev só começa quando o BA retorna `PRONTO`.
+>
+> ### B) Nova aplicação — primeiro setup
+> 1. Crie o repositório novo e copie `.github/`, `.vscode/`, `docs/user-stories/US-000-exemplo.md` e este `README.md`.
+>    **Não copie `.github/harness-setup.md`.** Copie `backend/` e `frontend/` só se a stack for a mesma.
+> 2. Abra a pasta no VS Code e crie a branch `chore/harness-setup`.
+> 3. No Chat, selecione o agente **Setup** (se abrir o Orquestrador antes, ele para e oferece o botão para o Setup).
+> 4. Responda a entrevista (12 temas, [seção 6](#6-informações-levantadas-no-setup)) e revise o plano `arquivo → mudança`.
+>    Aprove explicitamente dependências, CI/CD e remoção de pastas.
+> 5. O Setup aplica o plano e verifica (varredura de termos antigos, build e testes). Com tudo respondido e verificado,
+>    grava `status: CONCLUIDO`; se faltar algo obrigatório, grava `PENDENTE` e o Orquestrador continua bloqueado.
+> 6. Commit `chore(harness): adaptar harness para <app>` e siga como no caso A.
+>
+> Para refazer o setup: apague `.github/harness-setup.md` (ou mude o `status`) e rode o **Setup** de novo.
+> Detalhes completos abaixo em [Reaproveitar o harness em outra aplicação](#reaproveitar-o-harness-em-outra-aplicação).
+
 ---
 
 # Reaproveitar o harness em outra aplicação
