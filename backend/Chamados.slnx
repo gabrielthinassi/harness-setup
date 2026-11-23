@@ -1,0 +1,14 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Chamados.Domain/Chamados.Domain.csproj" />
+    <Project Path="src/Chamados.Application/Chamados.Application.csproj" />
+    <Project Path="src/Chamados.Infrastructure/Chamados.Infrastructure.csproj" />
+    <Project Path="src/Chamados.Api/Chamados.Api.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Chamados.Domain.Tests/Chamados.Domain.Tests.csproj" />
+    <Project Path="tests/Chamados.Application.Tests/Chamados.Application.Tests.csproj" />
+    <Project Path="tests/Chamados.ArchitectureTests/Chamados.ArchitectureTests.csproj" />
+    <Project Path="tests/Chamados.IntegrationTests/Chamados.IntegrationTests.csproj" />
+  </Folder>
+</Solution>

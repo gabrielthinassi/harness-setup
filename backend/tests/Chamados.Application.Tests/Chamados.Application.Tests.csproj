@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Chamados.Application\Chamados.Application.csproj" />
+    <!-- Usa o AppDbContext real (filtros e interceptor) com o provider em memória -->
+    <ProjectReference Include="..\..\src\Chamados.Infrastructure\Chamados.Infrastructure.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" />
+    <PackageReference Include="NSubstitute" />
+  </ItemGroup>
+</Project>

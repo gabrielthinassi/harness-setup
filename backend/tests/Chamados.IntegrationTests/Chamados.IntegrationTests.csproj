@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Requer Docker em execução (Testcontainers sobe um PostgreSQL real). -->
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Chamados.Api\Chamados.Api.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" />
+    <PackageReference Include="Testcontainers.PostgreSql" />
+  </ItemGroup>
+</Project>

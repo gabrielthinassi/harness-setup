@@ -1,0 +1,16 @@
+{
+  "chat.agent.enabled": true,
+  "chat.customAgentInSubagent.enabled": true,
+  "chat.useHooks": true,
+  "editor.formatOnSave": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "eslint.workingDirectories": [
+    "./frontend"
+  ],
+  "typescript.tsdk": "frontend/node_modules/typescript/lib"
+}
