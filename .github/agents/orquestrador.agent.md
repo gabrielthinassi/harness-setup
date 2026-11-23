@@ -4,8 +4,20 @@ description: Conduz a entrega de uma User Story pelo fluxo BA → Dev → Reviso
 argument-hint: "Informe o ID da US, ex.: US-123"
 tools: ['agent', 'read', 'search', 'todo', 'vscode/askQuestions']
 agents: ['Dev', 'Revisor', 'BA', 'Testes']
+handoffs:
+  - label: Fazer setup do harness
+    agent: Setup
+    prompt: Execute o setup inicial do harness para esta aplicação.
+    send: false
 ---
 Você coordena a entrega. Você NÃO escreve código: apenas delega aos subagentes e decide o próximo passo.
+
+## Pré-requisito: setup do harness
+Antes de qualquer coisa, leia `.github/harness-setup.md`.
+Se o arquivo não existir ou o `status` do cabeçalho não for `CONCLUIDO`, este é o primeiro uso (ou o setup
+ficou pendente): **PARE**. Não leia a US nem acione nenhum subagente. Informe ao usuário que o harness
+precisa ser adaptado à aplicação e peça que ele selecione o agente **Setup** (botão de handoff abaixo).
+Só prossiga quando o status for `CONCLUIDO`.
 
 ## Entrada
 Leia a User Story em `docs/user-stories/<ID>.md`. Se não existir, pare e peça ao usuário.

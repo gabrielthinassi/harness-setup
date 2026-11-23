@@ -92,3 +92,6 @@ Siga exatamente https://www.conventionalcommits.org/en/v1.0.0/.
 ## Fluxo de entrega de feature
 Toda feature segue o fluxo do agente **Orquestrador** (`.github/agents/orquestrador.agent.md`):
 BA (prontidão) → Dev → Revisor → BA (validação) → (ajustes) → Testes.
+
+O Orquestrador só inicia o fluxo com o harness adaptado à aplicação (`.github/harness-setup.md` com
+`status: CONCLUIDO`). Para outra aplicação, veja "Reaproveitar o harness em outra aplicação" no `README.md`.
